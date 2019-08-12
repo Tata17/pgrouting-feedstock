@@ -25,6 +25,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - cgal
     - cmake
@@ -33,7 +34,7 @@ requirements:
     - postgresql
     - postgis
   run:
-    - {{ pin_compatible('cgal', exact=True) }}
+    - {{ pin_compatible('cgal', exact=True) }}op
     - postgis
     - postgresql
 
