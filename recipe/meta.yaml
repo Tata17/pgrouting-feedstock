@@ -17,8 +17,10 @@ build:
     - mkdir build
     - cd build
     - cmake ..
+    - cmake -G ..
     - make
     - sudo make install
+    - make install
   skip: True  # [win]
 
 
@@ -28,8 +30,6 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - cmake
-    - perl
-    - pkg-config
     - postgresql
     - postgis
     - cgal
